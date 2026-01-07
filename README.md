@@ -37,13 +37,17 @@ State Management: ViewModel, StateFlow
 
 📸 Screenshots
 
+## 📸 Screenshots
+
+### Onboarding
+<img src="screenshots/onBoarding_1.png" width="250"/>
+<img src="screenshots/onBoarding_2.png" width="250"/>
+
 ### Dashboard
-![Dashboard](Screen-shots/iPhone 13 mini - 1.png)
+<img src="screenshots/Dashboard.png" width="300"/>
 
-### Transactions
-![Transactions](Screen-shots/)
-
-
+### Add Expense
+<img src="screenshots/add_Expense.png" width="300"/>
 
 
 📦 Download & Install
