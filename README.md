@@ -40,12 +40,9 @@ State Management: ViewModel, StateFlow
 ## 📸 Screenshots
 
 ### Onboarding
-<img src="screenshots/onBoarding_1.png" width="250"/>
-<img src="screenshots/onBoarding_2.png" width="250"/>
-
-### Dashboard
+<img src="screenshots/onBoarding_1.png" width="250"/> <img src="screenshots/onBoarding_2.png" width="250"/> 
+### Dashboard 
 <img src="screenshots/Dashboard.png" width="300"/>
-
 ### Add Expense
 <img src="screenshots/add_Expense.png" width="300"/>
 
