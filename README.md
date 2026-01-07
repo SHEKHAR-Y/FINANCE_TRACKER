@@ -50,21 +50,16 @@ State Management: ViewModel, StateFlow
 📦 Download & Install
 
 You can download and install the app using the APK from GitHub Releases:
-
 Note: Enable “Install from unknown sources” on your Android device before installing.
 
 
 🚀 Run Locally
 
 Clone the repository:
-
 git clone git@github.com:SHEKHAR-Y/FINANCE_TRACKER.git
 
-
 Open the project in Android Studio
-
 Sync Gradle
-
 Run the app on an emulator or physical device
 
 
@@ -72,11 +67,8 @@ Run the app on an emulator or physical device
 
 This project is actively being developed.
 Upcoming improvements include:
-
 Enhanced analytics and insights
-
 UI/UX refinements
-
 Performance optimizations
 
 
