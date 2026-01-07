@@ -11,48 +11,37 @@ Finance Tracker helps users keep track of their daily expenses and understand wh
 ✨ Features
 
 Professional Dashboard
-
 Overview of total spending for the current month
-
 Remaining balance at a glance
-
 List of recent transactions for quick reference
-
 Spending Analytics (Weekly View)
-
 Graphical representation of daily spending
-
 Helps identify spending patterns over the week
-
 Transaction Management
-
 Add expenses with relevant details
-
 View a detailed screen for each individual transaction
-
 Category-Based Expenses
-
 Organize expenses by category for better clarity and analysis
-
 Analytics Section (In Progress)
-
 Advanced insights and reports are currently under development
 
 
 🛠 Tech Stack
 
 Language: Kotlin
-
 UI: Jetpack Compose
-
 Architecture: MVVM
-
 Local Storage: Room Database
-
 State Management: ViewModel, StateFlow
 
 
 📸 Screenshots
+
+### Dashboard
+![Dashboard](Screen-shots/iPhone 13 mini - 1.png)
+
+### Transactions
+![Transactions](Screen-shots/)
 
 
 
