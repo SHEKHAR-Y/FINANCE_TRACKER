@@ -33,6 +33,20 @@ interface Dao {
     @Query("UPDATE balance SET CurrentBalance = CurrentBalance - :amount, LastUpdated = :lastUpdate")
     suspend fun updateBalance(amount: Int, lastUpdate: Long)
 
+    // update the budget when new month start
+    @Query("""
+        UPDATE Balance
+        SET 
+            CurrentBalance = Budget,
+            LastUpdated = :lastUpdated,
+            LastResetMonth = :lastResetMonth
+        WHERE id = 1
+    """)
+    suspend fun resetBalanceToBudget(
+        lastUpdated: Long,
+        lastResetMonth: String
+    )
+
     // get the data of current week
     @Query(
         """

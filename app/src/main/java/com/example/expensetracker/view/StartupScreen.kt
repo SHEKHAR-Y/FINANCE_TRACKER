@@ -74,6 +74,9 @@ fun StartUpScreen(
     val currentDateAndTime = LocalDateTime.now()
     val month = currentDateAndTime.month.name
 
+
+
+
     // is insert success
     val insertionSuccess by roomViewModel.insertFirstBudgetData.collectAsState()
 

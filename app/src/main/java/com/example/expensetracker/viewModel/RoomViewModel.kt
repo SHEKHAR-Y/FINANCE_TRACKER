@@ -89,6 +89,16 @@ class RoomViewModel @Inject constructor(
         }
     }
 
+    // reset the budget after every month
+    fun resetBudget(lastUpdated: Long, lastResetMonth: String){
+        viewModelScope.launch {
+            roomRepo.resetBudgetMonthly(
+                lastUpdated = lastUpdated,
+                lastResetMonth = lastResetMonth
+            )
+        }
+    }
+
     // get current week spending data
     private var _weeklySpendingData = MutableStateFlow<List<Int>>(emptyList())
     val weeklySpendingData = _weeklySpendingData.asStateFlow()

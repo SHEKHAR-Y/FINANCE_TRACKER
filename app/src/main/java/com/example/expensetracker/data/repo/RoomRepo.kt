@@ -59,6 +59,18 @@ class RoomRepo @Inject constructor(
         dao.updateBalance(amount, lastUpdated)
     }
 
+    // reset budget after every month
+    suspend fun resetBudgetMonthly(lastUpdated: Long, lastResetMonth: String){
+        try {
+            dao.resetBalanceToBudget(
+                lastUpdated = lastUpdated,
+                lastResetMonth = lastResetMonth
+            )
+        } catch (e: Exception){
+            println(e.message)
+        }
+    }
+
      // get the data of current week
      suspend fun getCurrentWeekData(start: Long, end: Long): List<DayExpense>?{
          return try {

@@ -85,7 +85,7 @@ fun ExpenseDetail(
                         }
                     ) {
                         Icon(
-                            painter = painterResource(R.drawable.back_arrow),
+                            painter = painterResource(R.drawable.left_arrow),
                             null,
                             modifier = Modifier.size(24.dp)
                         )

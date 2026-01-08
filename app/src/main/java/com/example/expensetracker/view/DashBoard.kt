@@ -45,11 +45,16 @@ import com.example.expensetracker.R
 import com.example.expensetracker.data.offline.table2
 import com.example.expensetracker.module.ResultState
 import com.example.expensetracker.utlis.formatIndianCurrency
+import com.example.expensetracker.utlis.fromLocalDateTime
 import com.example.expensetracker.utlis.toLocalDateTime
 import com.example.expensetracker.view.dashboard.WeeklySpendingBarGraph
 import com.example.expensetracker.viewModel.DataStoreViewModel
 import com.example.expensetracker.viewModel.RoomViewModel
+import kotlinx.coroutines.CoroutineScope
+import java.time.LocalDateTime
+import java.time.YearMonth
 import java.time.format.DateTimeFormatter
+import kotlin.coroutines.CoroutineContext
 
 
 @RequiresApi(Build.VERSION_CODES.O)
@@ -89,6 +94,25 @@ fun DashBoard(
         DateTimeFormatter.ofPattern("dd MMMM yyyy")
     )
     val context = LocalContext.current
+
+    // calculate days left in next month
+    val currentDateTime = LocalDateTime.now()
+    val yearMonth = YearMonth.from(currentDateTime)
+
+    val totalDaysInMonth = yearMonth.lengthOfMonth()
+    val daysLeft = totalDaysInMonth - currentDateTime.dayOfMonth
+
+    // check for the current month
+    val currentMonth = currentDateTime.month.name
+    val lastResetMonth = budgetDate?.LastResetMonth
+
+    if(lastResetMonth != null){
+        if(currentMonth != lastResetMonth){
+            roomViewModel.resetBudget(fromLocalDateTime(currentDateTime) ?: System.currentTimeMillis(), currentMonth)
+        }
+    }
+
+
 
     Column(
         modifier = Modifier
@@ -169,7 +193,7 @@ fun DashBoard(
 
                         // text show how many days and budget left
                         Text(
-                            "${formatIndianCurrency(budgetDate?.CurrentBalance.toString())}.00 RS, 22 DAYS LEFT",
+                            "${formatIndianCurrency(budgetDate?.CurrentBalance.toString())}.00 RS, $daysLeft DAYS LEFT",
                             style = MaterialTheme.typography.titleSmall,
                             fontWeight = FontWeight.SemiBold
                         )
@@ -387,4 +411,12 @@ fun BudgetLeftIndicator(
             gapSize = 2.dp
         )
     }
+}
+
+
+
+// function to reset the budget monthly
+@Composable
+fun ResetBudget(){
+
 }

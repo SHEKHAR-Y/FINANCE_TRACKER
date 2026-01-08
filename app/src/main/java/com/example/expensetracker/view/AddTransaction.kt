@@ -116,7 +116,7 @@ fun AddTransaction(
                         }
                     ) {
                         Icon(
-                            painter = painterResource(R.drawable.back_arrow),
+                            painter = painterResource(R.drawable.left_arrow),
                             contentDescription = "backIcon",
                             modifier = Modifier.size(24.dp)
                         )

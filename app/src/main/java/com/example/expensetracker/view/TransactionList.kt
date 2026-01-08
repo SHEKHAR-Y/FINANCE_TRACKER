@@ -65,7 +65,7 @@ fun TransactionList(
                         }
                     ) {
                         Icon(
-                            painter = painterResource(R.drawable.back_arrow), null,
+                            painter = painterResource(R.drawable.left_arrow), null,
                             modifier = Modifier.size(24.dp)
                         )
                     }
