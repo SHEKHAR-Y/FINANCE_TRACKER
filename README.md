@@ -35,18 +35,34 @@ Local Storage: Room Database
 State Management: ViewModel, StateFlow
 
 
-📸 Screenshots
-
 ## 📸 Screenshots
 
 ### Onboarding
-<img src="screenshots/onBoarding_1.png" width="250"/> <img src="screenshots/onBoarding_2.png" width="250"/>
-### Dashboard 
-<img src="screenshots/Dashboard.png" width="250"/>
+
+<p float="left">
+  <img src="screenshots/onBoarding_1.png" width="250" />
+  <img src="screenshots/onBoarding_2.png" width="250" />
+</p>
+
+### Dashboard
+
+<p float="left">
+  <img src="screenshots/Dashboard.png" width="250" />
+</p>
+
 ### Add Expense & Expense Details
-<img src="screenshots/add_Expense.png" width="250"/>  <img src="screenshots/Expense_detail.png" width="250"/>
+
+<p float="left">
+  <img src="screenshots/add_Expense.png" width="250" />
+  <img src="screenshots/Expense_detail.png" width="250" />
+</p>
+
 ### Expense List
-<img src="screenshots/Expense_list.png" width="250"/>
+
+<p float="left">
+  <img src="screenshots/Expense_list.png" width="250" />
+</p>
+
 
 
 📦 Download & Install
